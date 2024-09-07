@@ -1,0 +1,259 @@
+/* Stile generale */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Varela', sans-serif;
+    font-weight: bolder;
+    color: #003366;
+}
+
+hr {
+    border: none; /* Rimuove il bordo di default */
+    border-top: 1px solid #003366; /* Aggiunge una linea divisoria */
+    width: 60%; /* Larghezza della linea (80% del contenitore) */
+    margin: 20px auto; /* Spaziatura e centratura */
+}
+
+/* Info */
+.info-list {
+    list-style: None;
+    padding: 0;
+    display: inline-block;
+    width: auto; 
+}
+
+.info-list li {
+    display: flex;
+    justify-content: flex-start;
+    width: 360px;
+    padding: 3px;
+}
+
+.info-text {
+    padding-top: 20px;
+}
+
+.left {
+    text-align: left;
+    font-weight: bold;
+    flex: 1;
+}
+
+.right {
+    text-align: left;
+    padding-left: 20px;
+    padding-left: 0px;
+    flex-basis: 50%;
+    padding-top: 5px
+}
+
+/* Griglia */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne di uguale larghezza */
+    gap: 20px; /* Spazio tra le sottosezioni */
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.sottosezione {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f7fa;
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.sottosezione h2 {
+    color: #003366;
+    font-family: 'Varela', sans-serif;
+}
+
+.sottosezione a {
+    color: #005b96;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sottosezione a:hover {
+    text-decoration: underline;
+}
+
+.link-griglia {
+    list-style: None;
+    padding: 0;
+    display: inline-block;
+    width: auto;
+}
+
+/* Contatti */
+.contatti-title{
+    padding-top: 20px;
+}
+
+.contatti {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.blocco {
+    display: flex;
+    align-items: center; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f7fa;
+}
+
+.blocco img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Assicura che l'immagine mantenga proporzioni corrette */
+    border-radius: 50%; /* Crea un'immagine circolare */
+    margin-right: 20px;
+}
+
+.dettagli {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.dettagli h3 {
+    margin: 0;
+    color: #003366;
+    font-family: 'Varela';
+}
+
+.dettagli p {
+    margin: 5px 0;
+}
+
+.dettagli a {
+    color: #005b96;
+    text-decoration: none;
+}
+
+.dettagli a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #005b96;
+    color: white;
+    padding: 5pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Varela', sans-serif;
+    padding-left: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+.nav-links .active {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* Sezioni */
+.home-section, .materiali-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Materiali */
+.materiali-title {
+    font-family: 'Varela', sans-serif;
+}
+
+.materiali-lista {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.materiali-blocco-done {
+    border: 1px solid #003366;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f7fa;
+    text-align: left;
+}
+
+.materiali-blocco-done a {
+    color: #005b96;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.materiali-blocco a {
+    color: #005b96;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.materiali-blocco {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f7fa;
+    text-align: left;
+}
+
+.materiali-blocco, .materiali-blocco-done h2{
+    font-family: 'Varela', sans-serif;
+}
+
+.materiali-blocco a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1pt;
+    width: 100%;
+    bottom: 0;
+    height: fit-content;
+    font-size: small;
+}
