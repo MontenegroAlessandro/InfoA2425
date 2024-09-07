@@ -312,19 +312,25 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Cambia la disposizione in colonna */
-        align-items: flex-start; /* Allinea gli elementi a sinistra */
+        align-items: center; /* Allinea gli elementi a sinistra */
         padding: 10px;
     }
 
     .nav-links {
-        flex-direction: column; /* Dispone i link in colonna */
-        gap: 20px; /* Riduce lo spazio tra i link */
-        width: 100%; /* I link prendono tutta la larghezza disponibile */
+        display: flex;
+        /*flex-direction: column; /* Dispone i link in colonna */
+        justify-content: center;
+        /*gap: 20px; /* Riduce lo spazio tra i link */
+        /*width: 100%; /* I link prendono tutta la larghezza disponibile */
         text-align: center; /* Centra i link orizzontalmente */
     }
 
+    .nav-links li {
+        display: inline-block;
+    }
+
     .nav-links a {
-        width: 100%; /* I link si estendono per tutta la larghezza */
+        /*width: 100%; /* I link si estendono per tutta la larghezza */
         padding: 5px;
         text-align: center; /* Il testo del link è centrato */
     }
@@ -332,7 +338,8 @@ footer {
     .logo {
         font-size: 1.2rem;
         text-align: center;
-        width: 100%; /* La logo si estende per tutta la larghezza */
+        padding: 10px 0;
+        /*width: 100%; /* La logo si estende per tutta la larghezza */
     }
 }
 
