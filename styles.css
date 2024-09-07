@@ -257,3 +257,115 @@ footer {
     height: fit-content;
     font-size: small;
 }
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola colonna su schermi più piccoli */
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .contatti, .materiali-lista {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .blocco {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .blocco img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .materiali-blocco, .materiali-blocco-done {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .blocco img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .sottosezione, .materiali-blocco, .materiali-blocco-done {
+        padding: 10px;
+    }
+
+    .home-section, .materiali-section {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambia la disposizione in colonna */
+        align-items: flex-start; /* Allinea gli elementi a sinistra */
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Dispone i link in colonna */
+        gap: 0.5rem; /* Riduce lo spazio tra i link */
+        width: 90%; /* I link prendono tutta la larghezza disponibile */
+        text-align: center; /* Centra i link orizzontalmente */
+    }
+
+    .nav-links a {
+        width: 100%; /* I link si estendono per tutta la larghezza */
+        padding: 4px;
+        text-align: center; /* Il testo del link è centrato */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%; /* La logo si estende per tutta la larghezza */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%; /* La logo si estende per tutta la larghezza */
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
