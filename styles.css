@@ -271,15 +271,6 @@ footer {
         padding-right: 10%;
     }
 
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
     .blocco {
         flex-direction: column;
         align-items: flex-start;
@@ -305,10 +296,6 @@ footer {
         height: 80px;
     }
 
-    .navbar {
-        padding: 10px;
-    }
-
     .sottosezione, .materiali-blocco, .materiali-blocco-done {
         padding: 10px;
     }
@@ -331,14 +318,14 @@ footer {
 
     .nav-links {
         flex-direction: column; /* Dispone i link in colonna */
-        gap: 0.5rem; /* Riduce lo spazio tra i link */
-        width: 90%; /* I link prendono tutta la larghezza disponibile */
+        gap: 20px; /* Riduce lo spazio tra i link */
+        width: 100%; /* I link prendono tutta la larghezza disponibile */
         text-align: center; /* Centra i link orizzontalmente */
     }
 
     .nav-links a {
         width: 100%; /* I link si estendono per tutta la larghezza */
-        padding: 4px;
+        padding: 5px;
         text-align: center; /* Il testo del link è centrato */
     }
 
@@ -369,4 +356,3 @@ footer {
         text-align: center;
     }
 }
-
