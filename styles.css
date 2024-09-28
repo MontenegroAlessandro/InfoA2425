@@ -218,7 +218,7 @@ hr {
 
 .materiali-blocco-done a {
     color: #005b96;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
