@@ -13,11 +13,43 @@
 <body>
     <nav class="navbar">
         <div class="logo">💾 Informatica A</div>
-        <ul class="nav-links">
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+            &#9776; <!-- Icona hamburger -->
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="materiali.html">Materiali</a></li>
+            <li><a href="https://polimi365-my.sharepoint.com/:x:/g/personal/10545327_polimi_it/EUMp6o5wO_xFilx0bIijlvgBWoNqo97mxESMsUysOZNQqQ?e=wYheu6">Laboratorio</a></li>
         </ul>
     </nav>
+    <script>
+        function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+
+        // Aggiungere/rimuovere la classe active per aprire/chiudere il menu
+        navLinks.classList.toggle('active');
+
+        // Cambia l'icona in base allo stato del menu
+        if (navLinks.classList.contains('active')) {
+        menuIcon.innerHTML = '&times;'; // Cambia in X
+        } else {
+        menuIcon.innerHTML = '&#9776;'; // Cambia in hamburger
+        }
+    }
+
+    // Aggiungere un evento click ai link per chiudere il menu quando viene cliccato un link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+        
+        // Chiudi il menu e ripristina l'icona
+        navLinks.classList.remove('active');
+        menuIcon.innerHTML = '&#9776;'; // Torna a hamburger
+        });
+    });
+    </script>
 
     <section class="home-section">
         <h1>Corso di Informatica A 2024/2025</h1>

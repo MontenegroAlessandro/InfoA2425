@@ -13,22 +13,54 @@
 <body>
     <nav class="navbar">
         <div class="logo">💾 Informatica A</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+            &#9776; <!-- Icona hamburger -->
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="non-active">Home</a></li>
             <li><a href="materiali.html" class="active">Materiali</a></li>
+            <li><a href="https://polimi365-my.sharepoint.com/:x:/g/personal/10545327_polimi_it/EUMp6o5wO_xFilx0bIijlvgBWoNqo97mxESMsUysOZNQqQ?e=wYheu6">Laboratorio</a></li>
         </ul>
     </nav>
+    <script>
+        function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+
+        // Aggiungere/rimuovere la classe active per aprire/chiudere il menu
+        navLinks.classList.toggle('active');
+
+        // Cambia l'icona in base allo stato del menu
+        if (navLinks.classList.contains('active')) {
+        menuIcon.innerHTML = '&times;'; // Cambia in X
+        } else {
+        menuIcon.innerHTML = '&#9776;'; // Cambia in hamburger
+        }
+    }
+
+    // Aggiungere un evento click ai link per chiudere il menu quando viene cliccato un link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+        
+        // Chiudi il menu e ripristina l'icona
+        navLinks.classList.remove('active');
+        menuIcon.innerHTML = '&#9776;'; // Torna a hamburger
+        });
+    });
+    </script>
 
     <section class="materiali-section">
         <h1 class="materiali-title">Materiale delle Esercitazioni</h1>
 
         <div class="materiali-lista">
             <div class="materiali-blocco-done">
-                <h2>Strutture di Controllo 1</h2>
+                <h2>Variabili e If</h2>
                 <p><b>Data</b>: 23 Settembre 2024</p>
-                <p><b>Slides</b>: <a href="slides/01-strutture-di-controllo.pdf">Strutture di Controllo 1</a></p>
-                <p><b>Soluzioni</b>: <a href="https://hackmd.io/@MontenegroAlessandro/SJCJ_MJ6A">Soluzioni - Strutture di Controllo 1</a></p>
-                <p><b>Registrazione</b>: <a href="https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=fab95349a295571ea7366a237efa9799">Registrazione Variabili e If Statements</a></p>
+                <p><b>Slides</b>: <a href="slides/01-strutture-di-controllo.pdf">Variabili e If</a></p>
+                <p><b>Soluzioni</b>: <a href="https://hackmd.io/@MontenegroAlessandro/SJCJ_MJ6A">Soluzioni - Variabili e If</a></p>
+                <p><b>Registrazione</b>: <a href="https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=fab95349a295571ea7366a237efa9799">Registrazione Variabili e If</a></p>
             </div>
 
             <div class="materiali-blocco-done">
@@ -39,24 +71,25 @@
             </div>
 
             <div class="materiali-blocco-done">
-                <h2>Strutture di Controllo 2</h2>
+                <h2>Loop</h2>
                 <p><b>Data</b>: 4 Ottobre 2024</p>
-                <p><b>Slides</b>: <a href="slides/03-strutture-di-controllo.pdf">Strutture di Controllo 2</a></p>
-                <p><b>Soluzioni</b>: <a href="https://hackmd.io/@MontenegroAlessandro/SyDwkJQ00">Soluzioni - Strutture di Controllo 2</a></p>
-                <p><b>Registrazione</b>: <a href="https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=8c2fc0e92128236fb9449ab8cc065169">Registrazione Strutture di Controllo 2</a></p>
+                <p><b>Slides</b>: <a href="slides/03-strutture-di-controllo.pdf">Loop</a></p>
+                <p><b>Soluzioni</b>: <a href="https://hackmd.io/@MontenegroAlessandro/SyDwkJQ00">Soluzioni - Loop</a></p>
+                <p><b>Registrazione</b>: <a href="https://politecnicomilano.webex.com/politecnicomilano/ldr.php?RCID=8c2fc0e92128236fb9449ab8cc065169">Registrazione Loop</a></p>
             </div>
 
-            <div class="materiali-blocco">
-                <h2>Array e Struct</h2>
+            <div class="materiali-blocco-done">
+                <h2>Array e Stringhe</h2>
                 <p><b>Data</b>: 14 Ottobre 2024</p>
-                <p><b>Slides</b>: <a href="#">Array e Struct</a></p>
-                <p><b>Soluzioni</b>: <a href="#">Soluzioni - Array e Struct</a></p>
+                <p><b>Slides</b>: <a href="#">Array e Stringhe</a></p>
+                <p><b>Soluzioni</b>: <a href="#">Soluzioni - Array e Stringhe</a></p>
+                <p><b>Registrazione</b>: <a href="#">Resgistrazione Array e Stringhe</a></p>
             </div>
 
             <div class="materiali-blocco">
                 <h2>Matrici</h2>
                 <p><b>Data</b>: 21 Ottobre 2024</p>
-                <p><b>Slides</b>: <a href="#">Matrici</a></p>
+                <p><b>Slides</b>: <a href="#">Struct e Matrici</a></p>
                 <p><b>Soluzioni</b>: <a href="#">Soluzioni - Matrici</a></p>
             </div>
 
