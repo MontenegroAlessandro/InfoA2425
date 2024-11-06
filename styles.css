@@ -118,16 +118,6 @@ hr {
     background-color: #f4f7fa;
 }
 
-.tutorato-contatti a {
-    color: var(--color-bg);
-    font-family: 'Varela';
-    text-decoration: None;
-}
-
-.tutorato-contatti a:hover{
-    text-decoration: underline;
-}
-
 .blocco img {
     width: 100px;
     height: 100px;
@@ -327,6 +317,17 @@ z-index: 2;
     color: #ccc;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Tutorato */
+.tutorato-contatti a {
+    color: var(--color-bg);
+    font-family: 'Varela';
+    text-decoration: None;
+}
+
+.tutorato-contatti a:hover{
+    text-decoration: underline;
 }
 
 /* Footer */
