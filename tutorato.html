@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorato - Informatica A 24/25</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arial' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">💾 Informatica A</div>
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+            &#9776; <!-- Icona hamburger -->
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="non-active">Home</a></li>
+            <li><a href="materiali.html" class="non-active">Materiali</a></li>
+            <li><a href="https://polimi365-my.sharepoint.com/:x:/g/personal/10545327_polimi_it/EUMp6o5wO_xFilx0bIijlvgBWoNqo97mxESMsUysOZNQqQ?e=wYheu6">Laboratorio</a></li>
+            <li><a href="tutorato.html" class="active">Tutorato</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+
+        // Aggiungere/rimuovere la classe active per aprire/chiudere il menu
+        navLinks.classList.toggle('active');
+
+        // Cambia l'icona in base allo stato del menu
+        if (navLinks.classList.contains('active')) {
+        menuIcon.innerHTML = '&times;'; // Cambia in X
+        } else {
+        menuIcon.innerHTML = '&#9776;'; // Cambia in hamburger
+        }
+    }
+
+    // Aggiungere un evento click ai link per chiudere il menu quando viene cliccato un link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        var menuIcon = document.getElementById('menuIcon');
+        
+        // Chiudi il menu e ripristina l'icona
+        navLinks.classList.remove('active');
+        menuIcon.innerHTML = '&#9776;'; // Torna a hamburger
+        });
+    });
+    </script>
+
+    <section class="materiali-section">
+        <h1 class="materiali-title">Tutorato</h1>
+        <div class="tutorato-info">
+            <p>Durante le ore di tutorato si terranno dei Q&A su <b>esercizi</b> e tematiche di <b>teoria</b>.</p>
+            <p>Le sessioni di tutorato si svolgeranno in <b>presenza</b> o da <b>remoto</b>, di seguito il calendario con tutte le informazioni necessarie.</p>
+            <p class="tutorato-contatti">Per <b>info</b> contattare Alessandro Montenegro (<a href="mailto:alessandro.montenegro@polimi.it">alessandro.montenegro@polimi.it</a>) o Edoardo Peretti (<a href="mailto:edoardo.peretti@polimi.it">edoardo.peretti@polimi.it</a>).</p>
+        </div>
+
+        <hr>
+        
+        <h1 class="materiali-title">Form per le Domande</h1>
+        <div class="tutorato-info">
+            <p>Prima di ogni sessione, siete invitati ad inviare una domanda compilando il seguente form:</p>
+            <p class="tutorato-contatti"><a href="https://forms.office.com/e/ddSJUMFDHX">Form per le domande</a></p>
+        </div>
+
+        <hr>
+
+        <h1 class="materiali-title">Calendario</h1>
+        <div class="materiali-lista">
+            <div class="materiali-blocco">
+                <h2>Preparazione Prova Intermedia 1/2</h2>
+                <p><b>Data</b>: 11 Novembre 2024</p>
+                <p><b>Orario</b>: 15:00 - 18:00 (3h)</p>
+                <p><b>Aula</b>: TBD</p>
+                <p><b>Referente</b>: Alessandro Montenegro</p>
+            </div>
+
+            <div class="materiali-blocco">
+                <h2>Preparazione Prova Intermedia 2/2</h2>
+                <p><b>Data</b>: 12 Novembre 2024</p>
+                <p><b>Orario</b>: 15:00 - 18:00 (3h)</p>
+                <p><b>Aula</b>: TBD</p>
+                <p><b>Referente</b>: Edoardo Peretti</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alessandro Montenegro</p>
+    </footer>
+</body>
+</html>
