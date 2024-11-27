@@ -294,6 +294,12 @@ z-index: 2;
     font-weight: bold;
 }
 
+.materiali-blocco-done h3 {
+    color: var(--color-header-text);
+    font-family: 'Varela', sans-serif;
+    text-decoration: underline;
+}
+
 .materiali-blocco a {
     color: var(--color-bg);
     text-decoration: none;
